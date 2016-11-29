@@ -1,19 +1,7 @@
 if ENV['LOCAL']
-
+  require_relative 'common'
   require 'simplecov'
   SimpleCov.start
-
-  require 'capybara'
-  require 'capybara/dsl'
-  require 'capybara/cucumber'
-  require 'selenium-webdriver'
-
-  $LOAD_PATH << './test_site'
-  $LOAD_PATH << './lib'
-
-  require 'site_prism'
-  require 'test_site'
-  require 'pages/home'
 
   Capybara.configure do |config|
     config.default_driver = :selenium

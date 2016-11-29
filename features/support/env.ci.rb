@@ -1,7 +1,7 @@
 if ENV['CI']
 
-  require 'selenium/webdriver'
-
+  require_relative 'common'
+  
   url = "http://#{ENV['BS_USERNAME']}:#{ENV['BS_AUTHKEY']}@hub.browserstack.com/wd/hub"
 
   capabilities = Selenium::WebDriver::Remote::Capabilities.new
